@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #071018;
+  --color-panel: #10202a;
+  --color-panel-strong: #16303d;
+  --color-line: #234155;
+  --color-mist: #8aa4b3;
+  --color-foam: #e8f4f2;
+  --color-tide: #2dd4bf;
+  --color-tide-deep: #14b8a6;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-ink);
+  color: var(--color-foam);
+  font-family: var(--font-sans);
+}
+
+#root {
+  isolation: isolate;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-tide) 35%, transparent);
+}
+
+textarea {
+  field-sizing: content;
+}
